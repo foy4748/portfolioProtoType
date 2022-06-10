@@ -1,0 +1,222 @@
+*{
+  list-style-type:none;
+  box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+}
+
+html {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*
+* > * {
+  border: 1px solid red;
+}
+*/
+
+body {
+  position:relative;
+}
+a {
+  text-decoration:none;
+  color: inherit;
+  z-index:5;
+}
+div>p{
+  margin:1rem;
+  padding-left:0.5rem;
+}
+.navBar {
+  display:flex;
+  justify-content:space-between;
+  background-color: #333E;
+  color: floralwhite;
+  height: 2rem;
+  position:sticky;
+  top:0;
+}
+
+.brand > a {
+  font-size:2.0rem;
+  height: 100%;
+  padding-left: 0.4rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.navBar{
+  height: min-content;
+  flex-direction: column;
+  justify-content:center;
+  z-index:10;
+}
+
+.navLinks {
+  height: min-content;
+  display:flex;
+  flex-direction: column;
+}
+
+.navLinks > ul.navLinks-items {
+  width:100%;
+  height: inherit;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+
+.navLinks > ul > li:hover {
+  height: 3rem;
+  padding: 0.2rem 0.4rem; 
+  background-color: #555;
+}
+.hamburger {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  width:1.5rem;
+  position: absolute;
+  right:0.70rem;
+}
+
+.hamburger span{
+  height:0.30rem;
+  margin:0.10rem;
+  width:100%;
+  background-color: floralwhite;
+  border-radius: 2rem;
+}
+.navLinks {
+  display:none;
+}
+
+img#profilePic {
+  width: 10rem;
+  border-radius: 100%;
+  border: 0.5rem solid #33333326;
+}
+.profile {
+  margin-top: 2rem;
+  height: min-content;
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+}
+
+.profilePicContainer {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  justify-content:center;
+}
+
+.picContainer {
+  width: min-content;
+  height: min-content;
+  position:relative;
+  padding: 1rem;
+}
+
+.shape {
+	  display: inline-block;
+	  height: 5rem;
+	  width: 4rem;
+	  background-color: hsl(43rad, 53%,68%);
+	  border-radius: 2rem 8rem 2rem 2rem;
+	  position:absolute;
+	  z-index: -1;
+}
+  .shape1{
+	  bottom:1.50rem;
+	  left:1.50rem;
+  }
+
+  .shape2{
+	  top:1.50rem;
+	  right:1.50rem;
+	  transform: rotate(180deg);
+  }
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .navBar{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+  }
+
+  .navLinks {
+	display:flex;
+	flex-direction: row;
+	width: 40%;
+  }
+
+  .navLinks > ul.navLinks-items {
+	display:flex;
+	flex-direction: row;
+	justify-content:space-around;
+	align-items:center;
+  }
+  .navLinks > ul.navLinks-items>* {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+  }
+  .hamburger{
+	display:none;
+  }
+
+  .profile {
+	display:flex;
+	flex-direction:row;
+  }
+  
+  .profilePicContainer {
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	width: 100%;
+  }
+
+  img#profilePic {
+	width: 20rem;
+  }
+
+  .Name {
+	font-size: 2rem;
+  }
+  .Name::before{
+	content:"You have come \a To the right place. \a At your service \a \a";
+	white-space:pre;
+  }
+  .shape {
+	  display: inline-block;
+	  height: 10rem;
+	  width: 12rem;
+	  background-color: hsl(43rad, 53%,68%);
+	  border-radius: 2rem 8rem 2rem 2rem;
+	  position:absolute;
+	  z-index:-1;
+
+  }
+
+  .shape1{
+	  bottom:1.50rem;
+	  left:1.50rem;
+  }
+
+  .shape2{
+	  top:1.50rem;
+	  right:1.50rem;
+	  transform: rotate(180deg);
+  }
+
+}
+
+.placeHolder{
+  display:none;
+}
