@@ -23,7 +23,11 @@ a {
   color: inherit;
   z-index:5;
 }
-div>p{
+h1 {
+	text-align:center;
+}
+
+div.preamble>p{
   margin:1rem;
   padding-left:0.5rem;
 }
@@ -98,9 +102,9 @@ img#profilePic {
   width: 10rem;
   border-radius: 100%;
   border: 0.5rem solid #33333326;
+  z-index: -1;
 }
 .profile {
-  margin-top: 2rem;
   height: min-content;
   display: flex;
   flex-direction:  column;
@@ -141,6 +145,41 @@ img#profilePic {
 	  transform: rotate(180deg);
   }
 
+  .mernIcons{
+	  display:flex;
+	  justify-content:space-evenly;
+  }
+
+  .icon{
+	  width: 4rem;
+	  height: 4rem;
+	  border-radius: 100%;
+	  padding: 0.25rem;
+  }
+
+  .icon:hover{
+	  position:relative;
+	  top: 0.25rem;
+  }
+
+  .preface{
+	  margin-top: 1rem;
+	  padding: 3rem;
+	  background-color: #eef;
+  }
+
+  .preface > p {
+	  text-align:justify;
+  }
+
+  .softSkills{
+	  margin-top: 1rem;
+	  padding:3rem;
+  }
+  .footer{
+	  text-align:center;
+  }
+  
 /* Media Queries */
 @media (min-width: 640px) {
   .navBar{
@@ -177,7 +216,8 @@ img#profilePic {
   }
   
   .profilePicContainer {
-	flex-direction: row-reverse;
+	  display:flex;
+	  flex-direction:row;
 	justify-content: space-around;
 	width: 100%;
   }
@@ -189,10 +229,7 @@ img#profilePic {
   .Name {
 	font-size: 2rem;
   }
-  .Name::before{
-	content:"You have come \a To the right place. \a At your service \a \a";
-	white-space:pre;
-  }
+
   .shape {
 	  display: inline-block;
 	  height: 10rem;
@@ -215,6 +252,20 @@ img#profilePic {
 	  transform: rotate(180deg);
   }
 
+}
+
+/* Animation part */
+.reactIcon{
+	animation: rotation 20s infinite linear ;
+}
+
+@keyframes rotation{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(359deg);
+	}
 }
 
 .placeHolder{
