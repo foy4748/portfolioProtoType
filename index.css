@@ -180,6 +180,37 @@ img#profilePic {
 	  text-align:center;
   }
   
+  .clientsReviews{
+    display:flex;
+    flex-flow:column;
+    align-items: center;
+    background-color: #eef;
+    padding: 2rem;
+  }
+
+  .clientsReviews > * + * {
+    margin-top: 1rem;
+  }
+
+  .review{
+    background-color:white;
+    border-radius: 3rem;
+    box-shadow: 0.10rem 0.25rem 0.2rem 0.2rem rgb(0 0 0 / 30%);
+    padding:2rem;
+    width: 15rem;
+    min-height: 28rem;
+  }
+
+  .review > h3 + p{
+    font-style:italic;
+  }
+  .review > * + * {
+    margin-top: 1rem;
+  }
+  
+  .clientsReviews{
+    margin-bottom:4rem;
+  }
 /* Media Queries */
 @media (min-width: 640px) {
   .navBar{
@@ -252,6 +283,17 @@ img#profilePic {
 	  transform: rotate(180deg);
   }
 
+  .review{
+    margin:0;
+  }
+
+  .clientsReviews{
+    flex-direction:row;
+    justify-content: space-around;
+    height:min-content;
+    width: 100%;
+    overflow-y:auto;
+  }
 }
 
 /* Animation part */
