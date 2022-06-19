@@ -116,6 +116,7 @@ img#profilePic {
   flex-flow: wrap column;
   align-items: center;
   justify-content:center;
+  margin-top: 3rem;
 }
 
 .picContainer {
@@ -175,6 +176,9 @@ img#profilePic {
   .softSkills{
 	  margin-top: 1rem;
 	  padding:3rem;
+	  display:flex;
+	  flex-direction:column;
+	  align-items:center;
   }
   .footer{
 	  text-align:center;
